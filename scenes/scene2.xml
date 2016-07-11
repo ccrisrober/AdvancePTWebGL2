@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SceneLevel dotWeight="true">
+	<Camera position="-185.1 65 4.9" up="0, 1, 0" yaw="180.0" pitch="0.0" />
+	<Light position="10 125 9" radius="10" color="1 1 1" intensity="100" />
+	<Objects>
+		<!-- Walls. -->
+		<!-- 
+			Outer: 210.
+			Inner: 200.
+			Height: 125.
+		-->	
+		<Box min="-10 115 -11" max="30 145 29">
+			<Emit>
+				<Absorb intensity="69" color="1 1 1" />
+			</Emit>
+		</Box>
+
+		<Box min="-210 0 100" max="210 125 110"><!-- Left -->
+			<Attenuate color="0.12 0.45 0.15"><!-- Green -->
+				<Diffuse />
+			</Attenuate>
+		</Box>
+		<Box min="-210 0 -100" max="110 125 -110"><!-- Right -->
+			<Attenuate color="0.65 0.05 0.05"><!-- Red -->
+				<Diffuse />
+			</Attenuate>
+		</Box>
+		<Box min="100 0 -100" max="110 125 100"><!-- Background -->
+			<Attenuate color="0.73 0.73 0.73"><!-- White -->
+				<Diffuse />
+			</Attenuate>
+		</Box>
+
+		<Box min="-210 0 -100" max="-200 125 100"><!-- Foreground -->
+			<Attenuate color="1 1 1"><!-- White -->
+				<Diffuse />
+			</Attenuate>
+		</Box>
+
+		<Box min="110 125 110" max="-210 135 -110"><!-- Ceiling -->
+			<Attenuate color="0.73 0.73 0.73"><!-- White -->
+				<Diffuse />
+			</Attenuate>
+		</Box>
+		<Box min="110 0 110" max="-210 10 -110"><!-- Floor -->
+			<Attenuate color="0.73 0.73 0.73"><!-- White -->
+				<Diffuse />
+			</Attenuate>
+		</Box>
+
+		<!-- Spheres -->
+		<!-- 
+			Height: 60.
+			La Z nos es más util que la X.
+		-->	
+		<Sphere center="0 60 30" radius="20">
+			<Metal iorComplex="2.1928 3.9379" glossiness="0.1" montecarlo="1.0" />
+		</Sphere> 
+		<Sphere center="0 60 -30" radius="20">
+			<SmoothDielectric ior="1.5" />
+		</Sphere> 
+		
+	</Objects>
+</SceneLevel>

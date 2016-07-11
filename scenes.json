@@ -1,0 +1,36 @@
+{
+	"scenes": [
+		{
+			"name": "Cubes, a dielectric and a metal",
+			"file": "scene0"
+		},
+		{
+			"name": "Balls and crystal table",
+			"file": "scene1"
+		},
+		{
+			"name": "Balls and solid table with wood floor",
+			"file": "scene1b"
+		},
+		{
+			"name": "Cornell's Box Red-Green",
+			"file": "scene2"
+		},
+		{
+			"name": "Cornell's Box Blue-Yellow",
+			"file": "scene3"
+		},
+		{
+			"name": "URJC Logo",
+			"file": "scene4"
+		},
+		{
+			"name": "Mesh Object",
+			"file": "scene7"
+		},
+		{
+			"name": "Triangle fighting sphere",
+			"file": "scene8"
+		}
+	]
+}

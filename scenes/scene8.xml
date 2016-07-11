@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SceneLevel dotWeight="true">
+	<Camera position="-89.0018 65 186.071" up="0, 1, 0" yaw="110" pitch="0" />
+	<Light position="0 111 -32" radius="12" color="1 1 0" intensity="167" />
+	<Objects>
+		<Box min="1000 0 1000" max="-1000 10 -1000"><!-- Floor -->
+			<SmoothDielectric ior="1.5" />
+		</Box>
+		<Sphere center="-25 40 -25" radius="24">
+			<Attenuate color="0.1 1.0 1.0" >
+				<Diffuse />
+			</Attenuate>
+		</Sphere>
+		<Triangle v0="0 0 75" v1="0 75 0" v2="75 0 0">
+			<FresnelComposite na="1.33" nb="2.77">
+				<Attenuate color="1.0 0.8 0.0">
+					<Diffuse />
+				</Attenuate>
+				<Transmit outerIor="1.0" innerIor="1.5" />
+			</FresnelComposite>
+		</Triangle>
+	</Objects>
+</SceneLevel>

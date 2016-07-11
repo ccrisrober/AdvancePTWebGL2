@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SceneLevel dotWeight="true">
+	<Camera position="-201.60 65 4.9" up="0, 1, 0" yaw="180.0" pitch="0.0" />
+	<Light position="10 125 9" radius="10" color="1 1 1" intensity="100" />
+	<Objects>
+		<!--<Box min="110 80 110" max="-210 90 -110">
+			<Attenuate color="0.73 1.0 0.0">
+				<Diffuse />
+			</Attenuate>
+		</Box>-->
+		<Plane normal="0 1 0" d="0">
+			<WorleyTexture color1="1.0 0.0 0.0" color2="0.0 1.0 0.0" />
+		</Plane>
+		<Sphere center="25 80 0" radius="15">
+			<FresnelComposite na="1.33" nb="2.77">
+				<SmoothDielectric ior="1.66" color="0.8 0.0 0.0" />
+				<Attenuate color="0.1 1.0 1.0" >
+					<Diffuse />
+				</Attenuate>
+			</FresnelComposite>
+		</Sphere>
+		<Mesh src="json_objs/tronco.json">
+			<!--<Attenuate color="1.0 0.73 1.0">
+				<Diffuse />
+			</Attenuate>-->
+			<!--<Metal iorComplex="2.1928 3.9379" glossiness="0.1" montecarlo="1.0" />-->
+			<PhongSpecular n="300" />
+		</Mesh>
+	</Objects>
+</SceneLevel>

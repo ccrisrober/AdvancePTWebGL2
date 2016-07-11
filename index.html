@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Tracing rays by CRB &amp; JGM</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  body {    
+    background-color: floralwhite;
+    color: black;
+  }
+  .c select {
+    width: 100%;
+  }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div style="text-align: center;">
+      <h1>Tracing rays (<span id="webgl-impl"></span> <span>mode</span>)</h1>
+      Created by <a href="https://es.linkedin.com/in/cristian-rodr%C3%ADguez-bernal-05805890" target="_blank">Cristian Rodríguez</a> &amp; <a href="https://es.linkedin.com/in/juan-guerrero-mart%C3%ADn-21487390" target="_blank">Juan Guerrero</a>
+    </div>
+    <hr/>
+    <div>
+      <p id="fps">60 fps</p>
+    </div>
+    <div style="position: relative; top: 0; left: 0; margin-top: 20px;">
+      <canvas id="canvas" width="640" height="640"></canvas> <!-- border: 30px solid transparent; border-image: url("http://i62.tinypic.com/2dh8y1g.jpg") 100 round;-->
+      <div id="statusContainer"><span id="status">Loading ...</span></div>
+    </div>
+    <div class="controls">
+      <p>
+        <div class="section">Help</div>
+        <div class="form-group">
+          <ul>
+            <li>
+              Check this <a href="https://en.wikipedia.org/wiki/List_of_refractive_indices" target="_blank">page</a> for real refractive indices.
+            </li>
+            <li>Pressing "Update" button to apply changes of Bounces, NumSamples and IOR sliders.</li>
+            <li>You can download current shader pressing "Download Shader" button.</li>
+        </div>
+      </p>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.js"></script>
+  <!--<script src="js/gl-matrix.js"></script>
+  <script src="scripts.js"></script>-->
+  <script src="js/gl-matrix.js"></script>
+
+  <script src="dist/globals.js"></script>
+  <script src="dist/SourceFrag.js"></script>
+  <script src="dist/shaderProgram.js"></script>
+  <script src="dist/utility.js"></script>
+  <script src="dist/scene.js"></script>
+  <script src="dist/environments.js"></script>
+  <script src="dist/camera.js"></script>
+
+  <script src="dist/renderable/Renderable.js"></script>
+  <script src="dist/renderable/Box.js"></script>
+  <script src="dist/renderable/Sphere.js"></script>
+  <script src="dist/renderable/Light.js"></script>
+  <script src="dist/renderable/Plane.js"></script>
+  <script src="dist/renderable/Triangle.js"></script>
+  <script src="dist/renderable/Mesh.js"></script>
+
+  <script src="dist/SceneLoader.js"></script>
+
+  <script src="dist/materials.js"></script>
+  <script src="dist/input.js"></script>
+  <script src="dist/HDRLoaders.js"></script>
+  <script src="dist/quadsToneMap.js"></script>
+  <script src="dist/integrators/RenderMode.js"></script>
+  <script src="dist/integrators/RayTracer.js"></script>
+  <script src="dist/integrators/SphericalHarmonics.js"></script>
+  <script src="dist/integrators/PathTracer.js"></script>
+  <script src="dist/index.js"></script>
+</body>
+</html>

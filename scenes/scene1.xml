@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SceneLevel dotWeight="true">
+	<Camera position="-144.15 65 12.42" up="0, 1, 0" yaw="180.0" pitch="0.0" />
+	<Light position="21 110 37" radius="6" color="1 1 0" intensity="167" />
+	<Objects>
+		
+		<!-- Floor -->
+		<Plane normal="0 1 0" d="0">
+			<Attenuate color="1.0 1.0 1.0">
+				<Diffuse />
+			</Attenuate>
+		</Plane>
+
+		<!-- Walls. -->
+		<!-- 
+			Outer: 210.
+			Inner: 200.
+			Height: 125.
+		-->	
+		<Box min="-210 0 200" max="210 125 210">
+			<Attenuate color="1.0 0.0 0.0">
+				<Diffuse />
+			</Attenuate>
+		</Box>
+		<Box min="-210 0 -210" max="210 125 -200">
+			<Attenuate color="1.0 0.0 0.0">
+				<Diffuse />
+			</Attenuate>
+		</Box>
+		<Box min="-210 0 -210" max="-200 125 210">
+			<Attenuate color="0.0 0.0 1.0">
+				<Diffuse />
+			</Attenuate>
+		</Box>
+		<Box min="200 0 -210" max="210 125 210">
+			<Attenuate color="0.0 0.0 1.0">
+				<Diffuse />
+			</Attenuate>
+		</Box>
+
+		<!-- Table. -->
+		<!-- Table. Legs. -->
+		<Box min="-40 0 -35" max="-35 41.49 -30">
+			<Attenuate color="0.200 0.149 0.109">
+				<Diffuse />
+			</Attenuate>
+		</Box>
+		<Box min="35 0 -35" max="40 41.49 -30">
+			<Attenuate color="0.200 0.149 0.109">
+				<Diffuse />
+			</Attenuate>
+		</Box>
+		<Box min="-40 0 50" max="-35 41.49 55">
+			<Attenuate color="0.200 0.149 0.109">
+				<Diffuse />
+			</Attenuate>
+		</Box>
+		<Box min="35 0 50" max="40 41.49 55">
+			<Attenuate color="0.200 0.149 0.109">
+				<Diffuse />
+			</Attenuate>
+		</Box>
+		<!-- Table. Crystal. -->
+		<!-- 
+			Height: 41.49.
+			Thickness: 42.49 - 41.49 = 1.0.
+		-->	
+		<Box min="-40 42.49 -35" max="40 41.49 55">
+			<SmoothDielectric ior="1.33" />
+		</Box>
+
+		<!-- Spheres -->
+		<!-- 
+			Height: 80.
+		-->	
+		<Sphere center="0 80 60" radius="8">
+			<Diffuse />
+		</Sphere> 
+		<Sphere center="0 80 30" radius="8">
+			<Attenuate color="1.0 0.0 0.0">
+				<Diffuse />
+			</Attenuate>
+		</Sphere> 
+		<Sphere center="0 80 0" radius="8">
+			<Metal iorComplex="2.1928 3.9379" glossiness="0.0" montecarlo="1.0" />
+		</Sphere> 
+		<Sphere center="0 80 -30" radius="8">
+			<Transmit outerIor="1.0" innerIor="1.5" />
+		</Sphere> 
+		<Sphere center="0 80 -60" radius="8">
+			<SmoothDielectric ior="1.5" />
+		</Sphere> 
+		
+	</Objects>
+</SceneLevel>

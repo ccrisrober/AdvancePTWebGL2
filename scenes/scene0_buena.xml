@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SceneLevel dotWeight="true">
+	<Camera position="-190 65 144.02" up="0, 1, 0" yaw="132.5" pitch="0" />
+	<Light position="21 80 37" radius="6" color="1 1 0" intensity="167" />
+	<Objects>
+		<Plane normal="0 1 0" d="0">
+			<Attenuate color="0.8 0.2 0.0">
+				<Diffuse />
+			</Attenuate>
+		</Plane>
+		<Box min="15 0 -35" max="35 25 -15">
+			<Attenuate color="0.1 0.9 0.1">
+				<Diffuse />
+			</Attenuate>
+		</Box>
+		<Box min="15 30 -35" max="35 50 -15">
+			<SmoothDielectric ior="1.33" />
+		</Box>
+		<Box min="15 55 -35" max="35 75 -15">
+			<Attenuate color="1.0 0.8 0.1">
+				<Diffuse />
+			</Attenuate>
+		</Box>
+
+		<Box min="-85 0 -35" max="-65 25 -15">
+			<Attenuate color="1.0 0.8 0.1">
+				<Diffuse />
+			</Attenuate>
+		</Box>
+		<Box min="-85 30 -35" max="-65 50 -15">
+			<SmoothDielectric ior="1.33" />
+		</Box>
+		<Box min="-85 55 -35" max="-65 75 -15">
+			<Attenuate color="0.1 0.9 0.1">
+				<Diffuse />
+			</Attenuate>
+		</Box>
+
+
+		<Sphere center="-25 40 -25" radius="12">
+			<Metal iorComplex="2.1928 3.9379" glossiness="0.8" montecarlo="1.0" />
+		</Sphere> 
+
+		<Box min="-35 30 -85" max="-15 50 -65">
+			<SmoothDielectric ior="1.66" />
+		</Box>
+		<Box min="-35 30 15" max="-15 50 35">
+			<SmoothDielectric ior="1.66" />
+		</Box>
+		
+
+		<Box min="-35 55 -35" max="-15 75 -15">
+			<Attenuate color="1.0 0.1 1.0">
+				<Diffuse />
+			</Attenuate>
+		</Box>
+		<Box min="-35 5 -35" max="-15 25 -15">
+			<Attenuate color="0.1 1.0 1.0" >
+				<Diffuse />
+			</Attenuate>
+		</Box>
+	</Objects>
+</SceneLevel>
