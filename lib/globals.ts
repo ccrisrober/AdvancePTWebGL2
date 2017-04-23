@@ -78,8 +78,11 @@ if (!gl) {
   throw "ERROR";
 }
 
-gl.getExtension("OES_texture_float"); // Only if webgl 1
-gl.getExtension("OES_texture_float_linear");
+if (!gl.getExtension("EXT_color_buffer_float")) {
+  console.error("FLOAT color buffer not available");
+  document.body.innerHTML = "This example requires EXT_color_buffer_float which is unavailable on this system.";
+  throw "EXT_color_buffer_float undefined";
+}
 
 getVendors();
 
