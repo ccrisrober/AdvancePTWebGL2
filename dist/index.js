@@ -440,15 +440,15 @@ window.addEventListener('load', function () {
                     updateStepProgram();
                 }
                 else if (config.enviroments == 1) {
-                    loadEnvironmentTexture('../../images/hdrTest1.hdr', 2048, 512, 2.0);
+                    loadEnvironmentTexture('images/hdrTest1.hdr', 2048, 512, 2.0);
                     config.Intensity = 2.0;
                 }
                 else if (config.enviroments == 2) {
-                    loadEnvironmentTexture('../../images/hdrTest2.hdr', 2048, 512, 0.5);
+                    loadEnvironmentTexture('images/hdrTest2.hdr', 2048, 512, 0.5);
                     config.Intensity = 0.5;
                 }
                 else if (config.enviroments == 3) {
-                    loadEnvironmentTexture('../../images/hdrTest3.hdr', 2048, 512, 1.2);
+                    loadEnvironmentTexture('images/hdrTest3.hdr', 2048, 512, 1.2);
                     config.Intensity = 1.2;
                 }
             });
